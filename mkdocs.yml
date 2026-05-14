@@ -1,1 +1,7 @@
-site_name: My Docs
+site_name: Windows Forms - C#
+
+theme: material
+
+nav:
+  - Inicio: index.md
+  - About: about.md
