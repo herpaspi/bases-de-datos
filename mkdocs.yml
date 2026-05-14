@@ -1,4 +1,4 @@
-site_name: Windows Forms - C#
+site_name: Bases de datos con C#
 
 docs_dir: 'md'
 
@@ -8,4 +8,8 @@ theme: material
 
 nav:
   - Inicio: index.md
+  - SQLite: conexion.md
+  - Instalar SQLite: instalar.md
+  - Ejecutar SQL: flujo.md
+  - Ejemplo: ejemplo.md
   - About: about.md
