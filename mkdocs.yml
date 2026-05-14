@@ -1,5 +1,9 @@
 site_name: Windows Forms - C#
 
+docs_dir: 'md'
+
+site_dir: 'docs'
+
 theme: material
 
 nav:
