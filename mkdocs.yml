@@ -4,7 +4,45 @@ docs_dir: 'md'
 
 site_dir: 'docs'
 
-theme: material
+theme:
+  name: material
+
+  font:
+    text: Poppins
+    code: JetBrains Mono
+
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+  palette:
+
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a oscuro
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a claro
+
+plugins:
+  - search
+  - page-to-pdf
+#  - print-site
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
   - Inicio: index.md

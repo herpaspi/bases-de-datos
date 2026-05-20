@@ -15,13 +15,16 @@ class Program
 
             // Crear tabla
             SqliteCommand comando = conexion.CreateCommand();
-            comando.CommandText = "CREATE TABLE IF NOT EXISTS Personas (id INTEGER PRIMARY KEY AUTOINCREMENT, Nombre TEXT, Edad INTEGER);";
+            comando.CommandText = "CREATE TABLE IF NOT EXISTS Personas" + 
+                                  " (id INTEGER PRIMARY KEY AUTOINCREMENT" +
+                                  ", Nombre TEXT, Edad INTEGER);";
             comando.ExecuteNonQuery();
 
 
             // Insertar dato
             SqliteCommand insertar = conexion.CreateCommand();
-            insertar.CommandText = "INSERT INTO Personas (Nombre, Edad) VALUES ('Ana',30);";
+            insertar.CommandText = "INSERT INTO Personas (Nombre, Edad)"+
+                                    " VALUES ('Ana',30);";
             insertar.ExecuteNonQuery();
 
             // Leer datos

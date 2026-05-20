@@ -9,6 +9,17 @@ por fila.
 
 ## Flujo de trabajo
 
+``` mermaid
+graph TD;
+  A[Crear Conexion] --> B[Abrir]
+  B --> C[Comando SQL]
+  C --> D{¿SELECT?}
+  D -- Sí --> E[ExecuteQuery]
+  D -- No --> F[ExecuteNonQuery]
+  E --> G[Cerrar]
+  F --> G[Cerrar]
+```
+
 1. Crear conexión
 ```csharp
 using (SqliteConnection conexion = new SqliteConnection(cadena))
