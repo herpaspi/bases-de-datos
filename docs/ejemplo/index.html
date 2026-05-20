@@ -29,6 +29,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
 
@@ -41,8 +44,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Poppins";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -55,7 +58,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -101,6 +111,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -381,7 +417,7 @@
           
             <div class="md-content" data-md-component="content">
               
-              <article class="md-content__inner md-typeset">
+              <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="ejemplo.pdf" title="PDF"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.5h1v3h-1v-3m-5 1h1v-1H7v1M20 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M9.5 10.5A1.5 1.5 0 0 0 8 9H5.5v6H7v-2h1a1.5 1.5 0 0 0 1.5-1.5v-1m5 0A1.5 1.5 0 0 0 13 9h-2.5v6H13a1.5 1.5 0 0 0 1.5-1.5v-3m4-1.5h-3v6H17v-2h1.5v-1.5H17v-1h1.5V9z"></path></svg></a>
                 
                   
 
@@ -389,47 +425,92 @@
 
   <h1>Ejemplo</h1>
 
-<pre><code class="language-csharp">using System;
-using Microsoft.Data.Sqlite;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.Data.Sqlite</span><span class="p">;</span>
 
-class Program
-{
-    static void Main()
-    {
-        string cadena = &quot;Data Source=miBD.db&quot;;
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Data Source=miBD.db&quot;</span><span class="p">;</span>
 
-        using (SqliteConnection conexion = new SqliteConnection(cadena))
-        {
-            conexion.Open();
+<span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqliteConnection</span><span class="w"> </span><span class="n">conexion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqliteConnection</span><span class="p">(</span><span class="n">cadena</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">conexion</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
 
-            // Crear tabla
-            SqliteCommand comando = conexion.CreateCommand();
-            comando.CommandText = &quot;CREATE TABLE IF NOT EXISTS Personas (id INTEGER PRIMARY KEY AUTOINCREMENT, Nombre TEXT, Edad INTEGER);&quot;;
-            comando.ExecuteNonQuery();
+<span class="w">            </span><span class="c1">// Crear tabla</span>
+<span class="w">            </span><span class="n">SqliteCommand</span><span class="w"> </span><span class="n">comando</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conexion</span><span class="p">.</span><span class="n">CreateCommand</span><span class="p">();</span>
+<span class="w">            </span><span class="n">comando</span><span class="p">.</span><span class="n">CommandText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;CREATE TABLE IF NOT EXISTS Personas&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">                                  </span><span class="s">&quot; (id INTEGER PRIMARY KEY AUTOINCREMENT&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                                  </span><span class="s">&quot;, Nombre TEXT, Edad INTEGER);&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">comando</span><span class="p">.</span><span class="n">ExecuteNonQuery</span><span class="p">();</span>
 
 
-            // Insertar dato
-            SqliteCommand insertar = conexion.CreateCommand();
-            insertar.CommandText = &quot;INSERT INTO Personas (Nombre, Edad) VALUES ('Ana',30);&quot;;
-            insertar.ExecuteNonQuery();
+<span class="w">            </span><span class="c1">// Insertar dato</span>
+<span class="w">            </span><span class="n">SqliteCommand</span><span class="w"> </span><span class="n">insertar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conexion</span><span class="p">.</span><span class="n">CreateCommand</span><span class="p">();</span>
+<span class="w">            </span><span class="n">insertar</span><span class="p">.</span><span class="n">CommandText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INSERT INTO Personas (Nombre, Edad)&quot;</span><span class="o">+</span>
+<span class="w">                                    </span><span class="s">&quot; VALUES (&#39;Ana&#39;,30);&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">insertar</span><span class="p">.</span><span class="n">ExecuteNonQuery</span><span class="p">();</span>
 
-            // Leer datos
-            SqliteCommand leer = conexion.CreateCommand();
-            leer.CommandText = &quot;SELECT * FROM Personas;&quot;;
+<span class="w">            </span><span class="c1">// Leer datos</span>
+<span class="w">            </span><span class="n">SqliteCommand</span><span class="w"> </span><span class="n">leer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conexion</span><span class="p">.</span><span class="n">CreateCommand</span><span class="p">();</span>
+<span class="w">            </span><span class="n">leer</span><span class="p">.</span><span class="n">CommandText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT * FROM Personas;&quot;</span><span class="p">;</span>
 
-            using (SqliteDataReader datos = leer.ExecuteReader())
-            {
-                while (datos.Read())
-                {
-                    string nombre = Convert.ToString(datos[1]);
-                    int edad = Convert.ToInt32(datos[2]);
-                    Console.WriteLine(nombre + &quot; - &quot; + edad);
-                }
-            }
-        }
-    }
-}
-</code></pre>
+<span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqliteDataReader</span><span class="w"> </span><span class="n">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leer</span><span class="p">.</span><span class="n">ExecuteReader</span><span class="p">())</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">datos</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="n">datos</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">                    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">datos</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; - &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -449,6 +530,12 @@ class Program
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -479,7 +566,7 @@ class Program
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
