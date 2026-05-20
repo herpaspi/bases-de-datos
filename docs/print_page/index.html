@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../flujo/">
-      
-      
-        <link rel="next" href="../about/">
       
       
         
@@ -23,7 +19,7 @@
     
     
       
-        <title>Ejemplo - Bases de datos con C#</title>
+        <title>Print Site - Bases de datos con C#</title>
       
     
     
@@ -53,13 +49,19 @@
     
       <link rel="stylesheet" href="../css/print-site-material.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  </head>
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
   
   
     
@@ -76,6 +78,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#index" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -109,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ejemplo
+              Print Site
             
           </span>
         </div>
@@ -336,17 +343,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ejemplo/" class="md-nav__link">
         
   
   
@@ -362,7 +362,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -412,6 +411,80 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Inicio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 SQLite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Instalar SQLite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Ejecutar SQL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 About
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -421,15 +494,102 @@
           
             <div class="md-content" data-md-component="content">
               
-              <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="ejemplo.pdf" title="PDF"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10.5h1v3h-1v-3m-5 1h1v-1H7v1M20 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M9.5 10.5A1.5 1.5 0 0 0 8 9H5.5v6H7v-2h1a1.5 1.5 0 0 0 1.5-1.5v-1m5 0A1.5 1.5 0 0 0 13 9h-2.5v6H13a1.5 1.5 0 0 0 1.5-1.5v-3m4-1.5h-3v6H17v-2h1.5v-1.5H17v-1h1.5V9z"></path></svg></a>
+              <article class="md-content__inner md-typeset">
                 
                   
 
 
 
-  <h1>Ejemplo</h1>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-index">Inicio</h1><p>El acceso a bases de datos es una de las partes más importantes del desarrollo de aplicaciones reales, ya que casi todos los sistemas (web, escritorio o móviles) dependen de la gestión de datos.</p>
+<h2 id="index-objetivo-del-tema">Objetivo del tema</h2>
+<p>El objetivo principal es que seas capaz de desarrollar aplicaciones en C# que interactúen con bases de datos de forma segura y eficiente, entendiendo qué ocurre “por dentro” cuando una aplicación guarda o recupera información.</p>
+<h2 id="index-que-vamos-a-aprender">¿Qué vamos a aprender?</h2>
+<p>En este bloque trabajaremos conceptos fundamentales como:</p>
+<ul>
+<li>Conexión a bases de datos desde C#</li>
+<li>Ejecución de consultas SQL (SELECT, INSERT, UPDATE, DELETE)</li>
+<li>Manejo de resultados de consultas</li>
+<li>Uso de clases como <code>SqliteConnection</code>, <code>SqliteCommand</code> y <code>SqliteDataReader</code></li>
+</ul></section><section class="print-page" id="conexion" heading-number="2"><h1 id="conexion-conexion">SQLite</h1><h2 id="por-que-sqlite">¿Por qué SQLite?</h2>
+<ul>
+<li>SQLite es un SGBD de pequeño tamaño que emplea el lenguaje SQL para realizar las consultas.</li>
+<li>Es ideal para aplicaciones de escritorio o móviles al guardar todo en un archivo y sin necesidad de software externo</li>
+</ul>
+<details class="note">
+<summary>¿Y cómo conectar con otros SGBD?</summary>
+<p>De forma similar se puede conectar con SGBD más potentes (Oracle, MySQL, SQL
+Server, …) sólo se diferenciará por la <strong><em>instalación</em></strong> y las <strong><em>clases</em></strong> que se utilizarán.</p>
+</details></section><section class="print-page" id="instalar" heading-number="3"><h1 id="instalar-instalar">Instalar SQLite</h1><h2 id="proceso-para-cada-proyecto">Proceso para cada proyecto</h2>
+<ul>
+<li>Se puede instalar haciendo clic derecho en dependencias e instalando como un paquete NuGet Debemos buscar Microsoft.Data.Sqlite <strong>SE INSTALA POR PROYECTO</strong></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Qué es Nuget?</p>
+<ul>
+<li>NuGet es el administrador de paquetes oficial para .NET</li>
+<li>Acabaremos añadiendo using Microsoft.Data.Sqlite; en nuestro .cs</li>
+</ul>
+</div>
+<h2 id="instalar-captura-de-pantalla">Captura de pantalla</h2>
+<p><img alt="" src="../images/instalacion.png" /></p></section><section class="print-page" id="flujo" heading-number="4"><h1 id="flujo-flujo">Ejecutar SQL</h1><h2 id="interactuar-con-la-base-de-datos">Interactuar con la Base de Datos</h2>
+<p>Para interactuar con la base de datos, usaremos <strong>tres clases principales</strong> (para SQLite):</p>
+<ul>
+<li><strong>SqliteConnection</strong> : Establece la conexión con el archivo de la base de datos.</li>
+<li><strong>SqliteCommand</strong> : Representa la orden SQL que vamos a ejecutar.</li>
+<li><strong>SqliteDataReader</strong> : Nos permite leer los resultados de una consulta SELECT fila 
+por fila.</li>
+</ul>
+<h2 id="flujo-flujo-de-trabajo">Flujo de trabajo</h2>
+<pre class="mermaid"><code>graph TD;
+  A[Crear Conexion] --&gt; B[Abrir]
+  B --&gt; C[Comando SQL]
+  C --&gt; D{¿SELECT?}
+  D -- Sí --&gt; E[ExecuteQuery]
+  D -- No --&gt; F[ExecuteNonQuery]
+  E --&gt; G[Cerrar]
+  F --&gt; G[Cerrar]</code></pre>
+<ol>
+<li>Crear conexión
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqliteConnection</span><span class="w"> </span><span class="n">conexion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqliteConnection</span><span class="p">(</span><span class="n">cadena</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Open() → OPEN
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">conexion</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Usar BD → OK
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqliteConnection</span><span class="w"> </span><span class="n">conexion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqliteConnection</span><span class="p">(</span><span class="n">cadena</span><span class="p">))</span>
+<span class="n">SqliteCommand</span><span class="w"> </span><span class="n">comando</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conexion</span><span class="p">.</span><span class="n">CreateCommand</span><span class="p">();</span>
+<span class="n">comando</span><span class="p">.</span><span class="n">CommandText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;CREATE TABLE IF NOT EXISTS Personas (Nombre TEXT);&quot;</span><span class="p">;</span>
+<span class="n">comando</span><span class="p">.</span><span class="n">ExecuteNonQuery</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Salir de using → CLOSE automático</li>
+</ol>
+<h2 id="flujo-como-ejecutar-las-consultas-sql">¿Cómo ejecutar las consultas SQL?</h2>
+<ol>
+<li>Primero se crea el comando:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">SqliteCommand</span><span class="w"> </span><span class="n">comando</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conexion</span><span class="p">.</span><span class="n">CreateCommand</span><span class="p">();</span>
+<span class="n">comando</span><span class="p">.</span><span class="n">CommandText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;CREATE TABLE IF NOT EXISTS Personas (Nombre TEXT);&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+<li>
+<p>A continuación llamamos al comando para ejecutar:</p>
+<ul>
+<li><strong>comando.ExecuteNonQuery</strong>: para INSERT, UPDATE, DELETE</li>
+<li><strong>comando.ExecuteReader</strong>: para sentencias SELECT</li>
+<li><strong>comando.ExecuteScalar()</strong>: Para sentencias SELECT que devuelven un único valor (ej: COUNT(*) ).</li>
+</ul>
+</li>
+</ol></section><section class="print-page" id="ejemplo" heading-number="5"><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -514,7 +674,61 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div></td></tr></table></div></section><section class="print-page" id="about" heading-number="6"><h1 id="about-about">About</h1><h2 id="curso-creado-por-herminia-pastor-pina">Curso creado por Herminia Pastor Pina</h2>
+<h3 id="about-curso-cefire-creacio-de-recursos-amb-markdown">Curso Cefire: Creació de Recursos amb MarkDown</h3>
+<p>Por tanto, esta web ha sido creada con:</p>
+<ul>
+<li>MkDocs</li>
+<li>Tema: Material </li>
+<li>Markdown</li>
+</ul></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
+            
+                .print-site-enumerate-headings #index h3:before { content: '1.' counter(counter-index-2) '.' counter(counter-index-3) ' ' }
+                .print-site-enumerate-headings #index h3 {  counter-increment: counter-index-3 }
+            
+.print-site-enumerate-headings #conexion > h1:before { content: '2 ' }
+
+                .print-site-enumerate-headings #conexion h2:before { content: '2.' counter(counter-conexion-2) ' ' }
+                .print-site-enumerate-headings #conexion h2 {  counter-reset: counter-conexion-3 ;  counter-increment: counter-conexion-2 }
+            
+                .print-site-enumerate-headings #conexion h3:before { content: '2.' counter(counter-conexion-2) '.' counter(counter-conexion-3) ' ' }
+                .print-site-enumerate-headings #conexion h3 {  counter-increment: counter-conexion-3 }
+            
+.print-site-enumerate-headings #instalar > h1:before { content: '3 ' }
+
+                .print-site-enumerate-headings #instalar h2:before { content: '3.' counter(counter-instalar-2) ' ' }
+                .print-site-enumerate-headings #instalar h2 {  counter-reset: counter-instalar-3 ;  counter-increment: counter-instalar-2 }
+            
+                .print-site-enumerate-headings #instalar h3:before { content: '3.' counter(counter-instalar-2) '.' counter(counter-instalar-3) ' ' }
+                .print-site-enumerate-headings #instalar h3 {  counter-increment: counter-instalar-3 }
+            
+.print-site-enumerate-headings #flujo > h1:before { content: '4 ' }
+
+                .print-site-enumerate-headings #flujo h2:before { content: '4.' counter(counter-flujo-2) ' ' }
+                .print-site-enumerate-headings #flujo h2 {  counter-reset: counter-flujo-3 ;  counter-increment: counter-flujo-2 }
+            
+                .print-site-enumerate-headings #flujo h3:before { content: '4.' counter(counter-flujo-2) '.' counter(counter-flujo-3) ' ' }
+                .print-site-enumerate-headings #flujo h3 {  counter-increment: counter-flujo-3 }
+            
+.print-site-enumerate-headings #ejemplo > h1:before { content: '5 ' }
+
+                .print-site-enumerate-headings #ejemplo h2:before { content: '5.' counter(counter-ejemplo-2) ' ' }
+                .print-site-enumerate-headings #ejemplo h2 {  counter-reset: counter-ejemplo-3 ;  counter-increment: counter-ejemplo-2 }
+            
+                .print-site-enumerate-headings #ejemplo h3:before { content: '5.' counter(counter-ejemplo-2) '.' counter(counter-ejemplo-3) ' ' }
+                .print-site-enumerate-headings #ejemplo h3 {  counter-increment: counter-ejemplo-3 }
+            
+.print-site-enumerate-headings #about > h1:before { content: '6 ' }
+
+                .print-site-enumerate-headings #about h2:before { content: '6.' counter(counter-about-2) ' ' }
+                .print-site-enumerate-headings #about h2 {  counter-reset: counter-about-3 ;  counter-increment: counter-about-2 }
+            
+                .print-site-enumerate-headings #about h3:before { content: '6.' counter(counter-about-2) '.' counter(counter-about-3) ' ' }
+                .print-site-enumerate-headings #about h3 {  counter-increment: counter-about-3 }
+            </style>
 
 
 
@@ -570,7 +784,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

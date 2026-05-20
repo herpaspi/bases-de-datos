@@ -1,7 +1,7 @@
-- **¿Por qué SQLite?**
-    – SQLite es un SGBD de pequeño tamaño que emplea el lenguaje SQL para realizar las consultas.
+## ¿Por qué SQLite? 
 
-    – Es ideal para aplicaciones de escritorio o móviles al guardar todo en un archivo y sin necesidad de software externo
+- SQLite es un SGBD de pequeño tamaño que emplea el lenguaje SQL para realizar las consultas.
+- Es ideal para aplicaciones de escritorio o móviles al guardar todo en un archivo y sin necesidad de software externo
 
 
 ??? note "¿Y cómo conectar con otros SGBD?"

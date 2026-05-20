@@ -15,6 +15,7 @@ theme:
     - navigation.sections
     - navigation.top
     - content.code.copy
+    #- content.action.print
 
   palette:
 
@@ -30,8 +31,9 @@ theme:
 
 plugins:
   - search
+#  - with-pdf
   - page-to-pdf
-#  - print-site
+  - print-site
 
 markdown_extensions:
   - admonition
